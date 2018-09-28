@@ -1,0 +1,34 @@
+{
+  "name": "sassy-beam",
+  "version": "1.0.0",
+  "description": "A Sass mixin to deal with a “BEM-like” notation and a simplified HTML markup",
+  "homepage": "https://github.com/thierrymichel/sassy-beam#readme",
+  "main": "scss/_sassy-beam.scss",
+  "scripts": {
+    "doc": "sassdoc scss/*.scss -d docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://github.com/thierrymichel/sassy-beam.git"
+  },
+  "keywords": [
+    "bem",
+    "mixins",
+    "modular",
+    "sass",
+    "scss",
+    "smacss"
+  ],
+  "author": {
+    "name": "Thierry Michel",
+    "email": "thmichel@gmail.com",
+    "url": "http://thierrymichel.net/"
+  },
+  "license": "SEE LICENSE IN UNLICENSE",
+  "bugs": {
+    "url": "https://github.com/thierrymichel/sassy-beam/issues"
+  },
+  "devDependencies": {
+    "sassdoc": "^2.5.0"
+  }
+}

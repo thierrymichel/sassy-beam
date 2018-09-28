@@ -1,0 +1,98 @@
+/*! sassy-beam v1.0.0 | MIT License | http://git.io/sassy-beam */
+////
+/// Sassy Beam
+/// A mixin to "easily write" BEM-like selectors
+/// @author Thierry Michel
+////
+
+/// Get `block` or `block__element` segment
+/// @param {string} $str selector name with modifier(s)
+/// @return {string} *-- part
+@function get-base($str) {
+  @return str-slice($str, 0, str-index($str, '--')-1);
+}
+
+/// Get everything after `block|block__element--*`
+/// @param {string} $str selector name with modifier(s)
+/// @return {string} --* part
+@function get-rest($str) {
+  @return str-slice($str, str-index($str, '--')+2);
+}
+
+/// Check for segment `--modifier(--…)`
+/// @param {string} $str block|block__element--modifier(--…)
+/// @return {number|null} index or null if no occurrence of '--'
+@function has-modifiers($str) {
+  @return str-index($str, '--');
+}
+
+/// Get modifiers from modifier or modifiers--…
+/// @param {string} $str modifier(--…)
+/// @param {list} $modifiers [()] modifier list to be "merged"
+/// @return {list} list of modifiers
+@function get-modifiers($str, $modifiers: ()) {
+  @if has-modifiers($str) {
+    $modifiers: append($modifiers, get-base($str));
+    $modifiers: get-modifiers(get-rest($str), $modifiers);
+  } @else {
+    $modifiers: append($modifiers, $str);
+  }
+  @return $modifiers;
+}
+
+/// Parse a CSS selector "string" (className without ".")
+/// @param {string} $str block|block__element--modifier(--…)
+/// @return {map} map containing "base" property and optional "modifiers" property
+@function parse($str) {
+  $parts: ();
+
+  @if has-modifiers($str) {
+    $parts: (
+      'base': get-base($str),
+      'modifiers': get-modifiers(get-rest($str))
+    );
+  } @else {
+    $parts: (
+      'base': $str,
+    );
+  }
+
+  @return $parts;
+}
+
+/// BEAM magic mixin
+/// @param {string} $str BEM-like selector name
+/// @output Magic CSS ;)
+/// @example
+/// beam('block') { … }
+/// // .block, [class*='block--'] { … }
+///
+/// beam('block__el') { … }
+/// // .block__el, [class*='block__el--'] { … }
+///
+/// beam('block--mod') { … }
+/// // [class*='block--'][class*='--mod'] { … }
+///
+/// beam('block--mod1--mod2') { … }
+/// // [class*='block--'][class*='--mod1'][class*='--mod2'] { … }
+@mixin beam($str, $states: null) {
+  $parts: parse($str);
+  $base: map-get($parts, 'base');
+  $selector: '';
+
+  @if map-has-key($parts, 'modifiers') {
+    $selector: '[class*="' + $base + '--"]';
+
+    @each $modifier in map-get($parts, 'modifiers') {
+      $selector: $selector + '[class*="--' + $modifier + '"]';
+    }
+  } @else {
+    $selector: '.' + $base + ',[class*="' + $base + '--"]';
+  }
+
+  @at-root {
+    #{$selector} {
+      @content;
+    }
+  }
+}

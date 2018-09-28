@@ -1,0 +1,7 @@
+{
+    "name": "SassyBeam",
+    "description": "A Sass mixin to deal with a “BEM-like” notation and a simplified HTML markup",
+    "tags": ["mixins", "modular", "bem", "smacss"],
+    "website": "http://git.io/sassybeam",
+    "docs": "http://htmlpreview.github.io/?https://github.com/thierrymichel/SassyBeam/blob/master/docs/"
+}
