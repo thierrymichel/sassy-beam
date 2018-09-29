@@ -4,7 +4,9 @@
 
 ![stability-stable](https://img.shields.io/badge/stability-stable-green.svg)
 [![NPM version](https://img.shields.io/npm/v/sassy-beam.svg?style=flat-square)](https://www.npmjs.com/package/sassy-beam)
+[![License](https://img.shields.io/badge/license-UNLICENSE-green.svg?style=flat-square)](https://github.com/thierrymichel/sassy-beam/blob/master/UNLICENSE)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 Beam (or sassy-beam) allows the use of a [BEM](http://bem.info/method/definitions/)-like notation but with a lighter HTML markup.
 
