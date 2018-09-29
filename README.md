@@ -2,6 +2,10 @@
 
 > A Sass mixin to deal with a “BEM-like” notation and a simplified HTML markup
 
+![stability-stable](https://img.shields.io/badge/stability-stable-green.svg)
+[![NPM version](https://img.shields.io/npm/v/sassy-beam.svg?style=flat-square)](https://www.npmjs.com/package/sassy-beam)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 Beam (or sassy-beam) allows the use of a [BEM](http://bem.info/method/definitions/)-like notation but with a lighter HTML markup.
 
 It is a combo based on BEM, [Nicolas Gallagher's thoughs](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/) and [Harry Roberts's adaptations](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) … while adding my personal touch!
