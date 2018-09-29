@@ -94,7 +94,7 @@ bower install sassy-beam
 
 ## Extra
 
-* [Documentation](http://htmlpreview.github.io/?https://github.com/thierrymichel/sassy-beam/blob/master/docs/)
+* [Documentation](https://thierrymichel.github.io/sassy-beam/)
 
 ---
 
