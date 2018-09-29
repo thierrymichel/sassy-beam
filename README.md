@@ -35,12 +35,6 @@ It is a combo based on BEM, [Nicolas Gallagher's thoughs](http://nicolasgallaghe
 npm install sassy-beam
 ```
 
-### via Bower
-
-```sh
-bower install sassy-beam
-```
-
 ## Usage
 
 ### .html
