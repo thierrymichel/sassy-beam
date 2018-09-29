@@ -23,7 +23,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "cz-ccgls"
+      "path": "./node_modules/cz-ccgls"
     },
     "cz-ccgls": {
       "useScopes": false
