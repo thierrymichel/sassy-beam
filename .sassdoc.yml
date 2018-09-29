@@ -1,0 +1,5 @@
+basePath: https://github.com/thierrymichel/sassy-beam/tree/master
+dest: ./docs
+package: ./package.json
+theme: default
+descriptionPath: ./README.md
