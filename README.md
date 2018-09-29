@@ -5,6 +5,7 @@
 ![stability-stable](https://img.shields.io/badge/stability-stable-green.svg)
 [![NPM version](https://img.shields.io/npm/v/sassy-beam.svg?style=flat-square)](https://www.npmjs.com/package/sassy-beam)
 [![License](https://img.shields.io/badge/license-UNLICENSE-green.svg?style=flat-square)](https://github.com/thierrymichel/sassy-beam/blob/master/UNLICENSE)
+[![Build Status](https://travis-ci.org/thierrymichel/sassy-beam.svg?branch=master)](https://travis-ci.org/thierrymichel/sassy-beam)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
