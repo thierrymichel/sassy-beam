@@ -30,6 +30,20 @@
       "useScopes": false
     }
   },
+  "release": {
+    "prepare": [
+      "@semantic-release/npm",
+      {
+        "path": "@semantic-release/exec",
+        "cmd": "npm run doc"
+      },
+      {
+        "path": "@semantic-release/git",
+        "assets": ["docs"],
+        "message": "docs(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/thierrymichel/sassy-beam.git"
